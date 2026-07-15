@@ -310,6 +310,12 @@ main, header, footer { position: relative; z-index: 1; }
   margin: 0 auto;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .nav-link {
   font-size: 13.5px;
   font-weight: 500;
@@ -380,7 +386,6 @@ main, header, footer { position: relative; z-index: 1; }
   gap: 5px;
   padding: 8px;
   border-radius: var(--r-sm);
-  margin-left: auto;
   transition: background var(--t-fast);
 }
 
@@ -1291,6 +1296,59 @@ main, header, footer { position: relative; z-index: 1; }
   border-color: var(--clr-text);
 }
 
+.contact-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(14px, 2vw, 17px);
+  color: var(--clr-text-3);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color var(--t-fast), border-color var(--t-fast);
+}
+
+.contact-phone:hover {
+  color: #25d366;
+  border-color: #25d366;
+}
+
+/* CTA button row — email + WhatsApp side by side */
+.contact-cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* WhatsApp CTA button */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 14px 28px;
+  background: #25d366;
+  color: #ffffff;
+  border-radius: var(--r-full);
+  border: 2px solid #25d366;
+  text-decoration: none;
+  transition: transform var(--t-spring), box-shadow var(--t-fast), opacity var(--t-fast);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(37,211,102,0.3);
+  opacity: 0.9;
+}
+
+.btn-whatsapp.btn-lg { padding: 18px 40px; font-size: 15px; }
+
 /* =========================================================
    FOOTER
    ========================================================= */
@@ -1533,6 +1591,7 @@ main, header, footer { position: relative; z-index: 1; }
   .nav-links { display: none; }
   .btn-hire  { display: none; }
   .hamburger { display: flex; }
+  .nav-actions { margin-left: auto; }
 }
 
 /* Mobile */
